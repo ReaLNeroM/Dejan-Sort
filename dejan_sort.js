@@ -2,7 +2,7 @@ var l = [];
 var switched = [];
 var start, sorted;
 var main_timer, render_timer;
-var block_height = (board_height - 1) / (elements - 1);
+var block_increment = (board_height - 1) / (elements - 1);
 
 canvas.addEventListener("click", init);
 
@@ -21,7 +21,7 @@ function shuffle(val){
 
 function init(){
 	for(var i = 0; i < elements; i++){
-		l[i] = Math.round(i * block_height);
+		l[i] = Math.round(i * block_increment);
 		switched[i] = 0;
 	}
 	l = shuffle(l);
