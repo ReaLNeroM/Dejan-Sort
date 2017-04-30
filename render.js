@@ -1,3 +1,11 @@
+var canvas = document.getElementById('canvas');
+var ctx = canvas.getContext('2d');
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+var elements = canvas.width;
+var board_height = canvas.height;
+
 function render(){
 	ctx.fillStyle = '#000';
 
@@ -8,7 +16,7 @@ function render(){
 		} else {
 			ctx.fillStyle = '#0f0';
 		}
-		ctx.fillRect(i * Math.round(board_height / elements), 0, Math.round(board_height / elements), l[i]);
+		ctx.fillRect(i * 1, 0, 1, l[i]);
 	}
 
 	if(!sorted){

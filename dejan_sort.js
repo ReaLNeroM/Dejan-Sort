@@ -1,13 +1,5 @@
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
-
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-var elements = canvas.width;
-var board_height = canvas.height;
-
-var l = new Array(elements);
-var switched = new Array(elements);
+var l = [];
+var switched = [];
 var start, sorted;
 var main_timer, render_timer;
 var block_height = (board_height - 1) / (elements - 1);
@@ -41,7 +33,7 @@ function init(){
 	clearTimeout(main_timer);
 
 	render();
-	main(); 		
+	main();
 }
 
 function main(){
