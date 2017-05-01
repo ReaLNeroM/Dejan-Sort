@@ -4,8 +4,6 @@ var start, sorted;
 var main_timer, render_timer;
 var block_increment = (board_height - 1) / (elements - 1);
 
-canvas.addEventListener("click", init);
-
 init();
 
 function shuffle(val){
